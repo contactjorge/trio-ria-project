@@ -1,7 +1,11 @@
-#mid-section {
-	
+#top-banner{
+	height: 16rem;
+	background-image: url('img/topbanner.png');
 }
-
+#mid-section{
+	height: 16rem;
+	background-image: url('img/midbanner.jpg');
+}
 @media screen and (min-width: 16rem) and (max-width: 30rem) {
 
 }
