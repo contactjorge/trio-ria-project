@@ -7,6 +7,34 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous" defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous" defer></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous" defer></script>
+	<!-- Change layout for smaller screens. Tried to use handheld but did not work -->
+	<style>
+		@media screen and (min-width: 16rem) and (max-width: 30rem) {
+		.navi_links {
+			text-align: center;
+			display: block;
+		}
+
+		section {
+			text-align: center;
+			display: block;
+			height: 59rem;
+			width: 17rem;
+		}
+
+		#bottom-navi a {
+			text-align: center;
+			display: block;
+			}
+		}
+
+		@media screen and (min-width: 24rem) and (max-width: 26rem) {
+		section {
+			height: 55rem;
+			width: 21rem;
+		}
+	}
+	</style>
 </head>
 <body>
 <header class="container-fluid">
@@ -28,15 +56,15 @@
 
 
 <section id="reviews" class="container-fluid reviews group">
-		<section id="review1" class="review">
+		<section id="review1" class="col-sm-4 col-md-4 col-lg-4 review">
 			<h3 class="review-title">Duis aute irure</h3>
 			<p class="review-text">Quo dolor unde voluptate. Nihil minus et, cupiditate, atque, molestiae eligendi quaerat nam illum maxime debitis error.</p>
 		</section>
-		<section id="review2" class="review">
+		<section id="review2" class="col-sm-4 col-md-4 col-lg-4 review">
 			<h3 class="review-title">Duis aute irure</h3>
 			<p class="review-text">Porro voluptatem eligendi saepe dolorem non corporis, laboriosam, beatae dolore eum quae voluptate. Reiciendis, sequi quo. Quod.</p>
 		</section>
-		<section id="review3" class="review">
+		<section id="review3" class="col-sm-4 col-md-4 col-lg-4 review">
 			<h3 class="review-title">Duis aute irure</h3>
 			<p class="review-text">Accusantium quasi, placeat nam. Magnam nam harum soluta illum eius, accusantium quidem enim commodi illo maiores cum?</p>
 		</section>
