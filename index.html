@@ -1,80 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Trio-Ria Project</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous" defer></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous" defer></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous" defer></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	 crossorigin="anonymous" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	 crossorigin="anonymous" defer></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	 crossorigin="anonymous" defer></script>
+	<script src="./index.js" defer></script>
 	<!--
 		Change layout for smaller screens. Tried to use handheld but did not work.
 
 		https://github.com/contactjorge/trio-ria-project.git
 	-->
 	<style>
+		#top-banner {
+			height: 30rem;
+			background-image: url('img/topbanner.png');
+			-webkit-background-size: cover;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
 
-	#top-banner{
-		height: 30rem;
-		background-image: url('img/topbanner.png');
-		-webkit-background-size: cover;
-		background-size: cover;
-		background-position: center center;
-		background-repeat: no-repeat;
+		}
 
-	}
-	#mid-section{
-		height: 12rem;
-		background-image: url('img/midbanner.jpg');
-		-webkit-background-size: cover;
-		background-size: cover;
-		background-position: center center;
-		background-repeat: no-repeat;
+		#mid-section {
+			height: 12rem;
+			background-image: url('img/midbanner.jpg');
+			-webkit-background-size: cover;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
 
-	}
+		}
+
+		.color-list {
+			display: flex;
+			list-style: none;
+		}
+
+		.color {
+			margin: 0.5rem;
+			width: 1rem;
+			height: 1rem;
+			border-radius: 50%;
+			border: 0.1rem solid gray;
+		}
+
+		.image-placeholder {
+			height: 15rem;
+			width: 15rem;
+			border: 0.1rem solid gray;
+		}
+
+		.product {
+			display: flex;
+		}
 	</style>
 </head>
+
 <body>
-<header class="container-fluid" id="top-banner">
-	<!-- Banner -->
+	<header class="container-fluid" id="top-banner">
+		<!-- Banner -->
 		<div id="logo">Buff&amp;Go</div>
 
-</header>
+	</header>
 
-<header>
+	<header>
 
-<a href="#watchvideo" class="button">WATCH VIDEO</a>
-</header>
-
-
-<main>
-	<section>
-		<!-- form -->
-	</section>
-
-	<section class="container-fluid" id="mid-section">
-		<!-- banner -->
-
-	</section>
+		<a href="#watchvideo" class="button">WATCH VIDEO</a>
+	</header>
 
 
-<article id="reviews" class="container-fluid reviews group">
-		<div class="row">
-			<div id="review1" class="col-sm-4 col-md-4 col-lg-4 review">
-				<h3 class="review-title">Duis aute irure</h3>
-				<p class="review-text">Quo dolor unde voluptate. Nihil minus et, cupiditate, atque, molestiae eligendi quaerat nam illum maxime debitis error.</p>
+	<main>
+		<section>
+			<!-- form -->
+			<div class="productList"></div>
+			<!-- Root for products to populate to -->
+		</section>
+
+		<section class="container-fluid" id="mid-section">
+			<!-- banner -->
+
+		</section>
+
+
+		<article id="reviews" class="container-fluid reviews group">
+			<div class="row">
+				<div id="review1" class="col-sm-4 col-md-4 col-lg-4 review">
+					<h3 class="review-title">Duis aute irure</h3>
+					<p class="review-text">Quo dolor unde voluptate. Nihil minus et, cupiditate, atque, molestiae eligendi quaerat nam illum maxime debitis error.</p>
+				</div>
+				<div id="review2" class="col-sm-4 col-md-4 col-lg-4 review">
+					<h3 class="review-title">Duis aute irure</h3>
+					<p class="review-text">Porro voluptatem eligendi saepe dolorem non corporis, laboriosam, beatae dolore eum quae voluptate. Reiciendis, sequi
+						quo. Quod.</p>
+				</div>
+				<div id="review3" class="col-sm-4 col-md-4 col-lg-4 review">
+					<h3 class="review-title">Duis aute irure</h3>
+					<p class="review-text">Accusantium quasi, placeat nam. Magnam nam harum soluta illum eius, accusantium quidem enim commodi illo maiores cum?</p>
+				</div>
 			</div>
-			<div id="review2" class="col-sm-4 col-md-4 col-lg-4 review">
-				<h3 class="review-title">Duis aute irure</h3>
-				<p class="review-text">Porro voluptatem eligendi saepe dolorem non corporis, laboriosam, beatae dolore eum quae voluptate. Reiciendis, sequi quo. Quod.</p>
-			</div>
-			<div id="review3" class="col-sm-4 col-md-4 col-lg-4 review">
-				<h3 class="review-title">Duis aute irure</h3>
-				<p class="review-text">Accusantium quasi, placeat nam. Magnam nam harum soluta illum eius, accusantium quidem enim commodi illo maiores cum?</p>
-			</div>
-		</div>
-</article>
-</main>
+		</article>
+	</main>
 
 </body>
+
 </html>
